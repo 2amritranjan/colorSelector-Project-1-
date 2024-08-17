@@ -57,6 +57,16 @@
     border-radius: 10px;
     background-color: yellow;
   }
+  .reset-btn{
+    text-align: center;
+  }
+  button{
+    background-color: slategrey;
+    border-radius: 5px;
+    height: 40px;
+    width: 90px;
+    box-shadow: 2px 4px 6px black;
+  }
   </style>
 </head>
 <h3>Click on boxes to change background-color</h3>
@@ -67,7 +77,9 @@
     <div class="box3" id="box">Box 3</div>
     <div class="box4" id="box">Box 4</div>
   </div>
-  
+  <div class="reset-btn">
+    <button type="reset">RESET</button>
+  </div>
   
   
   <script>
@@ -93,6 +105,12 @@
   box4.addEventListener('click', function(){
     console.log('Element clicked!');
     document.body.style.backgroundColor = 'yellow';
+  });
+
+    const resetBtn = document.querySelector('.reset-btn');
+  resetBtn.addEventListener('click', function(){
+    console.log('Element clicked!');
+    document.body.style.backgroundColor = 'grey';
   });
   </script>
   
